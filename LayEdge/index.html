@@ -5,8 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Lay Edge | Premium Lay Betting Alerts</title>
   
-  <!-- Preload your new horse racing background image -->
   <link rel="preload" as="image" href="racing-bg.jpg" fetchpriority="high">
+  
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 
   <style>
     :root {
@@ -92,7 +93,6 @@
       box-shadow: 0 10px 20px rgba(181, 158, 95, 0.2);
     }
 
-    /* Progressive enhancement animation guard */
     section { padding: 100px 5%; max-width: 1200px; margin: 0 auto; }
     body.js-enabled section { opacity: 0; transform: translateY(30px); transition: all 0.8s ease-out; }
     body.js-enabled section.visible { opacity: 1; transform: translateY(0); }
@@ -147,7 +147,7 @@
       margin: 0 auto;
       overflow: hidden;
       border-radius: 12px;
-      padding-bottom: 40px; /* Space for dots */
+      padding-bottom: 40px; 
     }
     .carousel-track {
       display: flex;
@@ -166,8 +166,6 @@
       gap: 30px;
       align-items: stretch;
     }
-    
-    /* Navigation Arrows */
     .carousel-btn {
       position: absolute;
       top: calc(50% - 20px);
@@ -190,7 +188,6 @@
     .carousel-btn.prev { left: 0; }
     .carousel-btn.next { right: 0; }
 
-    /* Navigation Dots */
     .carousel-dots {
       position: absolute;
       bottom: 0;
@@ -209,7 +206,7 @@
     }
     .dot.active { background: var(--primary); }
 
-    /* FAQ Accordion Styling */
+    /* FAQ Accordion */
     .faq-container { max-width: 800px; margin: 0 auto; }
     details {
       background: rgba(13, 13, 13, 0.7);
@@ -236,6 +233,7 @@
     details[open] summary { color: var(--primary); margin-bottom: 15px; }
     details p { opacity: 0.85; line-height: 1.6; cursor: text; }
 
+    /* Pricing */
     .pricing-table { display: flex; justify-content: center; gap: 40px; flex-wrap: wrap; }
     .price-card {
       background: var(--lightgray);
@@ -292,7 +290,7 @@
       section { padding: 60px 5%; }
       h2 { font-size: 2rem; }
       .modal-content { padding: 25px; margin: 20px auto; }
-      .carousel-btn { display: none; /* Hide arrows on mobile, rely on touch/dots if desired, or keep them */ }
+      .carousel-btn { display: none; }
     }
   </style>
 </head>
@@ -368,7 +366,6 @@
       </div>
     </section>
 
-    <!-- VERIFIED ACTION CAROUSEL SECTION -->
     <section id="recent">
       <h2>Verified Action Receipts</h2>
       <p style="text-align: center; opacity: 0.8; max-width: 650px; margin: 0 auto 40px; font-size: 1.15rem;">
@@ -380,47 +377,10 @@
         <button class="carousel-btn next" onclick="moveSlide(1)">&#10095;</button>
 
         <div class="carousel-track" id="carouselTrack">
-          
-          <!-- SLIDE 1: Nottingham -->
-          <div class="carousel-slide">
-            <h3 style="text-align: center; color: white; margin-bottom: 25px; opacity: 0.9;">17:18 Nottingham — Lay Matched @ 5.70</h3>
-            <div class="carousel-content">
-              <div class="card" style="padding: 25px; max-width: 380px; width: 100%;">
-                <h4 style="margin-bottom: 20px; color: var(--primary); font-size: 1.2rem; display: flex; align-items: center; justify-content: center; gap: 10px;">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
-                  1. The Dispatch
-                </h4>
-                <img src="telegram-nottingham.jpg" alt="Telegram Alert" style="width: 100%; border-radius: 8px; border: 1px solid rgba(255,255,255,0.1); display: block;">
-              </div>
-              <div class="card" style="padding: 25px; max-width: 380px; width: 100%;">
-                <h4 style="margin-bottom: 20px; color: var(--success); font-size: 1.2rem; display: flex; align-items: center; justify-content: center; gap: 10px;">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                  2. The Result
-                </h4>
-                <img src="betfair-nottingham.jpg" alt="Betfair Result" style="width: 100%; border-radius: 8px; border: 1px solid rgba(255,255,255,0.1); display: block;">
-              </div>
-            </div>
           </div>
-
-          <!-- SLIDE 2: Placeholder for your next screenshots -->
-          <div class="carousel-slide">
-            <h3 style="text-align: center; color: white; margin-bottom: 25px; opacity: 0.9;">14:30 Epsom — Lay Matched @ 4.20</h3>
-            <div class="carousel-content">
-              <div class="card" style="padding: 25px; max-width: 380px; width: 100%; display: flex; align-items: center; justify-content: center; min-height: 400px; background: rgba(255,255,255,0.02);">
-                 <p style="opacity: 0.5;">[Add your next Telegram Image here]</p>
-              </div>
-              <div class="card" style="padding: 25px; max-width: 380px; width: 100%; display: flex; align-items: center; justify-content: center; min-height: 400px; background: rgba(255,255,255,0.02);">
-                <p style="opacity: 0.5;">[Add your next Betfair Image here]</p>
-              </div>
-            </div>
-          </div>
-
-        </div>
 
         <div class="carousel-dots" id="carouselDots">
-          <span class="dot active" onclick="currentSlide(0)"></span>
-          <span class="dot" onclick="currentSlide(1)"></span>
-        </div>
+          </div>
       </div>
     </section>
 
@@ -543,7 +503,8 @@
       <div class="modal-text" style="text-align: left;">
         <p><strong>Last updated: June 2026</strong></p>
         <p>Lay Edge ("we," "us," or "our") respects your privacy and is committed to protecting your personal data.</p>
-        <!-- Content truncated for brevity, exact same as before -->
+        <h3>1. The Data We Collect About You</h3>
+        <p>We may collect, use, store, and transfer different kinds of personal data about you, including Identity Data, Contact Data, and Technical Data.</p>
       </div>
       <button onclick="closePrivacyModal()" style="margin-top:30px; padding:12px 30px; background:#b59e5f; color:black; border:none; border-radius:6px; cursor:pointer; font-weight:bold; width: 100%;">Close</button>
     </div>
@@ -566,6 +527,88 @@
   <script>
     document.body.classList.add('js-enabled');
 
+    // --- DYNAMIC CMS CAROUSEL ENGINE ---
+    const track = document.getElementById('carouselTrack');
+    const dotsContainer = document.getElementById('carouselDots');
+    let slideIndex = 0;
+    let slides = [];
+    let dots = [];
+
+    // Fetch the data from your new results.json file
+    fetch('results.json')
+      .then(response => {
+        if (!response.ok) throw new Error("results.json not found");
+        return response.json();
+      })
+      .then(data => {
+        const verifiedResults = data.items || [];
+        track.innerHTML = '';
+        dotsContainer.innerHTML = '';
+        
+        verifiedResults.forEach((result, index) => {
+          const slideHTML = `
+            <div class="carousel-slide">
+              <h3 style="text-align: center; color: white; margin-bottom: 25px; opacity: 0.9;">${result.title}</h3>
+              <div class="carousel-content">
+                <div class="card" style="padding: 25px; max-width: 380px; width: 100%;">
+                  <h4 style="margin-bottom: 20px; color: var(--primary); font-size: 1.2rem; display: flex; align-items: center; justify-content: center; gap: 10px;">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+                    1. The Dispatch
+                  </h4>
+                  <img src="${result.telegramImage}" alt="Telegram Alert" style="width: 100%; border-radius: 8px; border: 1px solid rgba(255,255,255,0.1); display: block;">
+                </div>
+                <div class="card" style="padding: 25px; max-width: 380px; width: 100%;">
+                  <h4 style="margin-bottom: 20px; color: var(--success); font-size: 1.2rem; display: flex; align-items: center; justify-content: center; gap: 10px;">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                    2. The Result
+                  </h4>
+                  <img src="${result.betfairImage}" alt="Betfair Result" style="width: 100%; border-radius: 8px; border: 1px solid rgba(255,255,255,0.1); display: block;">
+                </div>
+              </div>
+            </div>
+          `;
+          track.innerHTML += slideHTML;
+          dotsContainer.innerHTML += `<span class="dot ${index === 0 ? 'active' : ''}" onclick="currentSlide(${index})"></span>`;
+        });
+
+        slides = document.querySelectorAll('.carousel-slide');
+        dots = document.querySelectorAll('.dot');
+      })
+      .catch(error => console.log("CMS data pending or error:", error));
+
+    function updateCarousel() {
+      if (slides.length === 0) return;
+      track.style.transform = `translateX(-${slideIndex * 100}%)`;
+      dots.forEach(dot => dot.classList.remove('active'));
+      if(dots[slideIndex]) dots[slideIndex].classList.add('active');
+    }
+
+    function moveSlide(n) {
+      if (slides.length === 0) return;
+      slideIndex += n;
+      if (slideIndex >= slides.length) { slideIndex = 0; }
+      if (slideIndex < 0) { slideIndex = slides.length - 1; }
+      updateCarousel();
+    }
+
+    function currentSlide(n) {
+      if (slides.length === 0) return;
+      slideIndex = n;
+      updateCarousel();
+    }
+
+    // --- NETLIFY IDENTITY LOGIN REDIRECT ---
+    if (window.netlifyIdentity) {
+      window.netlifyIdentity.on("init", user => {
+        if (!user) {
+          window.netlifyIdentity.on("login", () => {
+            document.location.href = "/admin/";
+          });
+        }
+      });
+    }
+
+    // --- COOKIES & MODALS ---
     window.addEventListener('DOMContentLoaded', () => {
       if (!localStorage.getItem('cookiesAccepted')) {
         document.getElementById('cookie-banner').style.display = 'block';
@@ -581,6 +624,7 @@
     function showTermsModal() { document.getElementById('terms-modal').style.display = 'block'; document.body.style.overflow = 'hidden'; }
     function closeTermsModal() { document.getElementById('terms-modal').style.display = 'none'; document.body.style.overflow = 'auto'; }
 
+    // --- SCROLL ANIMATIONS ---
     const sections = document.querySelectorAll('section');
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
@@ -590,30 +634,6 @@
       });
     }, { threshold: 0.1 });
     sections.forEach(section => observer.observe(section));
-
-    // --- CAROUSEL JAVASCRIPT ---
-    let slideIndex = 0;
-    const slides = document.querySelectorAll('.carousel-slide');
-    const dots = document.querySelectorAll('.dot');
-    const track = document.getElementById('carouselTrack');
-
-    function updateCarousel() {
-      track.style.transform = `translateX(-${slideIndex * 100}%)`;
-      dots.forEach(dot => dot.classList.remove('active'));
-      dots[slideIndex].classList.add('active');
-    }
-
-    function moveSlide(n) {
-      slideIndex += n;
-      if (slideIndex >= slides.length) { slideIndex = 0; }
-      if (slideIndex < 0) { slideIndex = slides.length - 1; }
-      updateCarousel();
-    }
-
-    function currentSlide(n) {
-      slideIndex = n;
-      updateCarousel();
-    }
   </script>
 </body>
 </html>
