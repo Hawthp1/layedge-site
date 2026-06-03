@@ -5,9 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Lay Edge | Premium Lay Betting Alerts</title>
   
+  <!-- Preload your new horse racing background image -->
   <link rel="preload" as="image" href="racing-bg.jpg" fetchpriority="high">
-  
-  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 
   <style>
     :root {
@@ -94,8 +93,6 @@
     }
 
     section { padding: 100px 5%; max-width: 1200px; margin: 0 auto; }
-    
-    /* Scroll animations removed for failsafe visibility */
 
     h2 { font-size: 2.6rem; text-align: center; margin-bottom: 3rem; color: white; }
 
@@ -374,10 +371,12 @@
         <button class="carousel-btn next" onclick="moveSlide(1)">&#10095;</button>
 
         <div class="carousel-track" id="carouselTrack">
-          </div>
+          <!-- Populated by JavaScript below -->
+        </div>
 
         <div class="carousel-dots" id="carouselDots">
-          </div>
+          <!-- Populated by JavaScript below -->
+        </div>
       </div>
     </section>
 
@@ -457,4 +456,154 @@
         </div>
         <div class="price-card" style="border: 2px solid var(--primary); transform: scale(1.02);">
           <h3>Yearly <span style="color:var(--primary); font-size: 0.9rem; display:block; margin-top:5px;">(Best Value)</span></h3>
-          <div class="price" style="margin: 20px 0;">£179<span style="font-size:1.1rem; opacity:0.7;">
+          <div class="price" style="margin: 20px 0;">£179<span style="font-size:1.1rem; opacity:0.7;">/yr</span></div>
+          <p style="color:var(--primary); font-weight: 500;">Save £60 per year</p>
+          <ul>
+            <li><span>✓</span> Everything in Monthly Plan</li>
+            <li><span>✓</span> Priority Support Channels</li>
+            <li><span>✓</span> Early Access to Beta Features</li>
+          </ul>
+          <a href="#" class="btn">Claim Best Value</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Lay Edge. All Rights Reserved.</p>
+    <p style="margin-top:12px; opacity:0.8; font-size:0.95rem;">
+      Questions? Email us at <a href="mailto:contact@layedge.net" style="color: var(--primary); font-weight: bold;">contact@layedge.net</a>
+    </p>
+    <p style="margin-top:15px; opacity:0.7; font-size:0.9rem;">
+      <a href="#" onclick="showPrivacyModal()">Privacy Policy</a> | 
+      <a href="#" onclick="showTermsModal()">Terms & Conditions</a> | 
+      18+ | <a href="https://www.begambleaware.org/" target="_blank" rel="noopener">Gamble Responsibly</a>
+    </p>
+    <p class="disclaimer">
+      <strong>Disclaimer:</strong> Lay Edge provides data analysis and information for educational and entertainment purposes only. We are not a bookmaker, and we do not take bets. Past performance of our algorithmic data is not indicative of future results. Betting on sports involves financial risk, and you should only gamble with funds you can safely afford to lose. If you or someone you know has a gambling problem and wants help, please seek professional support. By subscribing to Lay Edge, you agree to our Terms & Conditions.
+    </p>
+  </footer>
+
+  <div id="cookie-banner">
+    This website uses cookies to enhance your experience. 
+    <a href="#" onclick="showPrivacyModal()" style="color:#b59e5f; margin-left:5px;">Learn more</a>
+    <button onclick="acceptCookies()" style="margin-left:20px; padding:8px 20px; background:#b59e5f; color:black; border:none; border-radius:6px; cursor:pointer; font-weight:bold;">Accept</button>
+  </div>
+
+  <div id="privacy-modal">
+    <div class="modal-content">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+        <h2>Privacy Policy</h2>
+        <button onclick="closePrivacyModal()" style="padding:8px 20px; background:transparent; color:#e0e0e0; border:1px solid #e0e0e0; border-radius:6px; cursor:pointer;">X</button>
+      </div>
+      <div class="modal-text" style="text-align: left;">
+        <p><strong>Last updated: June 2026</strong></p>
+        <p>Lay Edge ("we," "us," or "our") respects your privacy and is committed to protecting your personal data.</p>
+        <h3>1. The Data We Collect About You</h3>
+        <p>We may collect, use, store, and transfer different kinds of personal data about you, including Identity Data, Contact Data, and Technical Data.</p>
+      </div>
+      <button onclick="closePrivacyModal()" style="margin-top:30px; padding:12px 30px; background:#b59e5f; color:black; border:none; border-radius:6px; cursor:pointer; font-weight:bold; width: 100%;">Close</button>
+    </div>
+  </div>
+
+  <div id="terms-modal">
+    <div class="modal-content">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+        <h2>Terms & Conditions</h2>
+        <button onclick="closeTermsModal()" style="padding:8px 20px; background:transparent; color:#e0e0e0; border:1px solid #e0e0e0; border-radius:6px; cursor:pointer;">X</button>
+      </div>
+      <div class="modal-text" style="text-align: left;">
+        <p><strong>Last updated: June 2026</strong></p>
+        <p>Please read these Terms and Conditions ("Terms", "Terms and Conditions") carefully before using the Lay Edge website.</p>
+      </div>
+      <button onclick="closeTermsModal()" style="margin-top:30px; padding:12px 30px; background:#b59e5f; color:black; border:none; border-radius:6px; cursor:pointer; font-weight:bold; width: 100%;">Close</button>
+    </div>
+  </div>
+
+  <script>
+    // --- BULLETPROOF CAROUSEL ENGINE ---
+    const track = document.getElementById('carouselTrack');
+    const dotsContainer = document.getElementById('carouselDots');
+    
+    // 👇 ADD YOUR NEW RESULTS HERE 👇
+    const verifiedResults = [
+      {
+        title: "17:18 Nottingham — Lay Matched @ 5.70",
+        telegramImage: "telegram-nottingham.jpg",
+        betfairImage: "betfair-nottingham.jpg"
+      }
+      // To add another win later, just add a comma above and paste a new block here!
+    ];
+
+    track.innerHTML = '';
+    dotsContainer.innerHTML = '';
+    
+    verifiedResults.forEach((result, index) => {
+      const slideHTML = `
+        <div class="carousel-slide">
+          <h3 style="text-align: center; color: white; margin-bottom: 25px; opacity: 0.9;">${result.title}</h3>
+          <div class="carousel-content">
+            <div class="card" style="padding: 25px; max-width: 380px; width: 100%;">
+              <h4 style="margin-bottom: 20px; color: var(--primary); font-size: 1.2rem; display: flex; align-items: center; justify-content: center; gap: 10px;">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+                1. The Dispatch
+              </h4>
+              <img src="${result.telegramImage}" alt="Telegram Alert" style="width: 100%; border-radius: 8px; border: 1px solid rgba(255,255,255,0.1); display: block;">
+            </div>
+            <div class="card" style="padding: 25px; max-width: 380px; width: 100%;">
+              <h4 style="margin-bottom: 20px; color: var(--success); font-size: 1.2rem; display: flex; align-items: center; justify-content: center; gap: 10px;">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                2. The Result
+              </h4>
+              <img src="${result.betfairImage}" alt="Betfair Result" style="width: 100%; border-radius: 8px; border: 1px solid rgba(255,255,255,0.1); display: block;">
+            </div>
+          </div>
+        </div>
+      `;
+      track.innerHTML += slideHTML;
+      dotsContainer.innerHTML += `<span class="dot ${index === 0 ? 'active' : ''}" onclick="currentSlide(${index})"></span>`;
+    });
+
+    let slideIndex = 0;
+    const slides = document.querySelectorAll('.carousel-slide');
+    const dots = document.querySelectorAll('.dot');
+
+    function updateCarousel() {
+      if (slides.length === 0) return;
+      track.style.transform = `translateX(-${slideIndex * 100}%)`;
+      dots.forEach(dot => dot.classList.remove('active'));
+      if(dots[slideIndex]) dots[slideIndex].classList.add('active');
+    }
+
+    function moveSlide(n) {
+      if (slides.length === 0) return;
+      slideIndex += n;
+      if (slideIndex >= slides.length) { slideIndex = 0; }
+      if (slideIndex < 0) { slideIndex = slides.length - 1; }
+      updateCarousel();
+    }
+
+    function currentSlide(n) {
+      if (slides.length === 0) return;
+      slideIndex = n;
+      updateCarousel();
+    }
+
+    // --- COOKIES & MODALS ---
+    window.addEventListener('DOMContentLoaded', () => {
+      if (!localStorage.getItem('cookiesAccepted')) {
+        document.getElementById('cookie-banner').style.display = 'block';
+      }
+    });
+    function acceptCookies() {
+      localStorage.setItem('cookiesAccepted', 'true');
+      document.getElementById('cookie-banner').style.display = 'none';
+    }
+
+    function showPrivacyModal() { document.getElementById('privacy-modal').style.display = 'block'; document.body.style.overflow = 'hidden'; }
+    function closePrivacyModal() { document.getElementById('privacy-modal').style.display = 'none'; document.body.style.overflow = 'auto'; }
+    function showTermsModal() { document.getElementById('terms-modal').style.display = 'block'; document.body.style.overflow = 'hidden'; }
+    function closeTermsModal() { document.getElementById('terms-modal').style.display = 'none'; document.body.style.overflow = 'auto'; }
+  </script>
+</body>
+</html>
