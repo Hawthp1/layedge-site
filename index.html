@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lay Edge | Premium Lay Betting Alerts</title>
+  
+  <link rel="preload" as="image" href="racing-bg.jpg" fetchpriority="high">
+  
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+
+  <style>
+    :root {
+      --primary: #b59e5f;
+      --dark: #0a0a0a;
+      --gray: #121212;
+      --lightgray: #1f1f1f;
+      --text: #e0e0e0;
+      --success: #2ecc71;
+      --danger: #e74c3c;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    
+    body {
+      font-family: 'Segoe UI', system-ui, sans-serif;
+      background: linear-gradient(rgba(10, 10, 10, 0.80), rgba(10, 10, 10, 0.85)), 
+                  url('racing-bg.jpg') center/cover no-repeat fixed;
+      color: var(--text);
+      line-height: 1.7;
+    }
+
+    header {
+      background: rgba(10, 10, 10, 0.75);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      position: fixed;
+      width: 100%;
+      z-index: 100;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    }
+    nav {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 1rem 5%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .logo img { height: 75px; width: auto; display: block; }
+    .nav-links a {
+      color: var(--text);
+      margin-left: 2.5rem;
+      text-decoration: none;
+      font-weight: 500;
+      transition: all 0.3s ease;
+    }
+    .nav-links a:hover { color: var(--primary); text-shadow: 0 0 8px var(--primary); }
+
+    .hero {
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 80px 5% 0;
+    }
+    .hero-content { animation: fadeInUp 1.2s ease forwards; }
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(50px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .hero h1 { font-size: 3.6rem; margin-bottom: 1rem; line-height: 1.1; color: white; }
+    .hero p { font-size: 1.25rem; max-width: 780px; margin: 0 auto 2.5rem; opacity: 0.9; }
+
+    .btn {
+      background: var(--primary);
+      color: black;
+      padding: 18px 40px;
+      font-size: 1.25rem;
+      font-weight: bold;
+      border-radius: 50px;
+      text-decoration: none;
+      transition: all 0.4s ease;
+      display: inline-block;
+      width: 100%;
+      max-width: 340px;
+      text-align: center;
+    }
+    .btn:hover { 
+      transform: translateY(-3px); 
+      background: #c9b47a;
+      box-shadow: 0 10px 20px rgba(181, 158, 95, 0.2);
+    }
+
+    section { padding: 100px 5%; max-width: 1200px; margin: 0 auto; }
+    body.js-enabled section { opacity: 0; transform: translateY(30px); transition: all 0.8s ease-out; }
+    body.js-enabled section.visible { opacity: 1; transform: translateY(0); }
+
+    h2 { font-size: 2.6rem; text-align: center; margin-bottom: 3rem; color: white; }
+
+    .profit {
+      background: var(--gray);
+      text-align: center;
+      padding: 60px 40px;
+      border-radius: 16px;
+      max-width: 800px;
+      margin: 40px auto;
+      border: 1px solid rgba(255,255,255,0.03);
+    }
+
+    .offer-banner {
+      background: linear-gradient(135deg, #b59e5f, #d4c090);
+      color: #000;
+      text-align: center;
+      padding: 18px 20px;
+      font-size: 1.3rem;
+      font-weight: bold;
+      margin-bottom: 40px;
+      border-radius: 8px;
+      box-shadow: 0 8px 20px rgba(181, 158, 95, 0.2);
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 30px;
+    }
+    .card {
+      background: var(--lightgray);
+      padding: 35px;
+      border-radius: 12px;
+      text-align: center;
+      border: 1px solid rgba(255,255,255,0.02);
+    }
+    
+    body.js-enabled section .card { opacity: 0; transform: translateY(30px); transition: all 0.7s ease; }
+    body.js-enabled section.visible .card { opacity: 1; transform: translateY(0); }
+
+    .testimonial-card { text-align: left; font-style: italic; position: relative; }
+    .testimonial-author { font-weight: bold; font-style: normal; color: var(--primary); margin-top: 15px; display: block; }
+
+    /* Carousel Specific Styles */
+    .carousel-wrapper {
+      position: relative;
+      max-width: 900px;
+      margin: 0 auto;
+      overflow: hidden;
+      border-radius: 12px;
+      padding-bottom: 40px; 
+    }
+    .carousel-track {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+      width: 100%;
+    }
+    .carousel-slide {
+      min-width: 100%;
+      box-sizing: border-box;
+      padding: 0 15px;
+    }
+    .carousel-content {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      align-items: stretch;
