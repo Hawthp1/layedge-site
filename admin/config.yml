@@ -1,21 +1,20 @@
-```yaml
-    backend:
-      name: git-gateway
-      branch: main
-    media_folder: "uploads"
-    public_folder: "/uploads"
-    collections:
-      - name: "results"
-        label: "Verified Results"
-        files:
-          - label: "Carousel Slides"
-            name: "carousel"
-            file: "results.json"
+backend:
+  name: git-gateway
+  branch: main
+media_folder: "uploads"
+public_folder: "/uploads"
+collections:
+  - name: "results"
+    label: "Verified Results"
+    files:
+      - label: "Carousel Slides"
+        name: "carousel"
+        file: "results.json"
+        fields:
+          - label: "Slides"
+            name: "items"
+            widget: "list"
             fields:
-              - label: "Slides"
-                name: "items"
-                widget: "list"
-                fields:
-                  - {label: "Race Title & Odds", name: "title", widget: "string"}
-                  - {label: "Telegram Image", name: "telegramImage", widget: "image"}
-                  - {label: "Betfair Image", name: "betfairImage", widget: "image"}
+              - {label: "Race Title & Odds", name: "title", widget: "string"}
+              - {label: "Telegram Image", name: "telegramImage", widget: "image"}
+              - {label: "Betfair Image", name: "betfairImage", widget: "image"}
