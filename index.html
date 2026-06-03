@@ -123,12 +123,22 @@
       grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
       gap: 30px;
     }
+    
     .card {
       background: var(--lightgray);
       padding: 35px;
       border-radius: 12px;
       text-align: center;
       border: 1px solid rgba(255,255,255,0.02);
+      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Smooth, slightly bouncy animation */
+    }
+    
+    /* NEW HOVER EFFECT */
+    .card:hover {
+      transform: scale(1.03) translateY(-5px);
+      background: #282828;
+      border: 1px solid rgba(181, 158, 95, 0.3);
+      box-shadow: 0 15px 30px rgba(0,0,0,0.5);
     }
 
     .testimonial-card { text-align: left; font-style: italic; position: relative; }
