@@ -6,7 +6,6 @@
   <title>Lay Edge | Premium Lay Betting Alerts</title>
 
   <link rel="icon" type="image/png" href="favicon.png">
-  
   <link rel="preload" as="image" href="racing-bg.jpg" fetchpriority="high">
 
   <style>
@@ -48,7 +47,7 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      flex-wrap: wrap; /* Added for mobile menu wrapping */
+      flex-wrap: wrap;
     }
     .logo img { height: 110px; width: auto; display: block; }
     
@@ -64,7 +63,6 @@
     }
     .nav-links a:hover { color: var(--primary); text-shadow: 0 0 8px var(--primary); }
 
-    /* Hamburger Menu Icon */
     .hamburger { 
       display: none; 
       font-size: 2rem; 
@@ -113,7 +111,6 @@
     }
 
     section { padding: 100px 5%; max-width: 1200px; margin: 0 auto; }
-
     h2 { font-size: 2.6rem; text-align: center; margin-bottom: 3rem; color: white; }
 
     .profit {
@@ -163,7 +160,6 @@
     .testimonial-card { text-align: left; font-style: italic; position: relative; }
     .testimonial-author { font-weight: bold; font-style: normal; color: var(--primary); margin-top: 15px; display: block; }
 
-    /* Carousel Specific Styles */
     .carousel-wrapper {
       position: relative;
       max-width: 900px;
@@ -229,7 +225,6 @@
     }
     .dot.active { background: var(--primary); }
 
-    /* FAQ Accordion */
     .faq-container { max-width: 800px; margin: 0 auto; }
     details {
       background: rgba(13, 13, 13, 0.7);
@@ -256,7 +251,6 @@
     details[open] summary { color: var(--primary); margin-bottom: 15px; }
     details p { opacity: 0.85; line-height: 1.6; cursor: text; }
 
-    /* Pricing */
     .pricing-table { display: flex; justify-content: center; gap: 40px; flex-wrap: wrap; }
     .price-card {
       background: var(--lightgray);
@@ -308,11 +302,9 @@
     @media (max-width: 768px) {
       .hero h1 { font-size: 2.4rem; }
       .hero p { font-size: 1.1rem; }
-      
-      /* Mobile Menu Styles */
       .hamburger { display: block; }
       .nav-links {
-        display: none; /* Hidden by default on mobile */
+        display: none; 
         width: 100%;
         flex-direction: column;
         text-align: center;
@@ -322,11 +314,8 @@
         margin-top: 15px;
       }
       .nav-links a { margin: 15px 0; font-size: 1.2rem; display: block; }
-      
-      /* Opens menu when checkbox is checked */
       #menu-toggle:checked ~ .nav-links { display: flex; }
-
-      .logo img { height: 75px; } /* Shrinks logo slightly so it fits nicely next to the menu icon */
+      .logo img { height: 75px; } 
       section { padding: 60px 5%; }
       h2 { font-size: 2rem; }
       .modal-content { padding: 25px; margin: 20px auto; }
@@ -358,7 +347,7 @@
     <section class="hero">
       <div class="hero-content">
         <h1>Bet Like a Bookmaker.<br>Quantify Your Lay Bets.</h1>
-        <p>LayEdge is the only automated exchange terminal powered by a dual-engine algorithm. We combine high-conviction Lay Scores with dynamic Win Expectancy probabilities—factoring in market liquidity, momentum, and AI-scouted race conditions—so you only risk liability when the math is on your side.</p>
+        <p>LayEdge is the only automated exchange terminal powered by a dual-engine algorithm. We combine high-conviction Lay Scores with dynamic, field-normalized Win Expectancies—factoring in market liquidity, pace bias, and AI-scouted race conditions—so you only risk liability when the math is on your side.</p>
         
         <div style="margin-top: 20px;">
           <a href="https://mymembers.io/lay-edge" class="btn" target="_blank" rel="noopener">Lock In £3.99/mo For Life</a>
@@ -388,7 +377,7 @@
             <line x1="12" y1="15" x2="12" y2="3"></line>
           </svg>
           <h3>Get The Data Drop</h3>
-          <p style="margin-top:10px; opacity:0.8;">Receive the morning dispatch containing exact runners, target lay odds, and our algorithmic staking advice.</p>
+          <p style="margin-top:10px; opacity:0.8;">Receive the morning dispatch containing target lay odds, AI scouting reports, and our algorithmic staking advice.</p>
         </div>
         <div class="card">
           <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="margin-bottom: 15px; display: inline-block;">
@@ -396,7 +385,7 @@
             <polyline points="17 6 23 6 23 12"></polyline>
           </svg>
           <h3>Execute & Profit</h3>
-          <p style="margin-top:10px; opacity:0.8;">Place your lays on your preferred exchange (Betfair, Smarkets, etc.), set your liability, and get on with your day.</p>
+          <p style="margin-top:10px; opacity:0.8;">Place your lays or use our Dual-Threat Cash Out tools on your preferred exchange, set your liability, and get on with your day.</p>
         </div>
       </div>
     </section>
@@ -413,9 +402,9 @@
           <p style="opacity:0.8;">We track price drifts, weak liquidity, class rises, and poor raw form to flag weak favorites and vulnerable runners. A score of 70+ means the horse is mathematically ripe for a lay.</p>
         </div>
         <div class="card">
-          <h3 style="color: var(--primary); font-size: 1.8rem; margin-bottom: 10px;">Win Expectancy</h3>
+          <h3 style="color: var(--primary); font-size: 1.8rem; margin-bottom: 10px;">Contextual Win Expectancy</h3>
           <span style="display: block; font-weight: bold; margin-bottom: 15px; opacity: 0.9;">Metric 2: True Win Probability (%)</span>
-          <p style="opacity:0.8;">We don't trust raw exchange odds. LayEdge calculates a base probability, weights it against live liquidity, and "firms" it using AI-driven situational data (Ground, Trainer Form, and Momentum).</p>
+          <p style="opacity:0.8;">We don't trust raw exchange odds. LayEdge normalizes win probabilities across the entire field, actively isolating "True Contenders" (strictly >20% Win Expectancy). If the favourite is weak, LayEdge instantly tells you who the real danger is.</p>
         </div>
       </div>
     </section>
@@ -423,7 +412,7 @@
     <section id="results">
       <div class="profit" style="padding: 50px 20px; max-width: 1000px; background: transparent; border: none; box-shadow: none;">
         <h2>Consistent. Transparent. Profitable.</h2>
-        <p style="font-size:1.25rem; opacity: 0.8; margin-bottom: 40px; font-weight: 500;">Live metrics direct from the Lay Edge algorithmic dashboard.</p>
+        <p style="font-size:1.25rem; opacity: 0.8; margin-bottom: 40px; font-weight: 500;">No vanity metrics. LayEdge’s Results Tracker automatically deducts standard Betfair exchange commission (2%) from all winning lays. See your true Net P&L, accurate Strike Rates, and realistic ROI—exactly as it appears in your exchange balance.</p>
         <img src="dashboard-proof.jpg" alt="Lay Edge Dashboard Results" style="width: 100%; max-width: 900px; height: auto; border-radius: 12px; border: 1px solid rgba(255,255,255,0.08); box-shadow: 0 25px 50px rgba(0,0,0,0.8); display: block; margin: 0 auto;">
         <p style="margin-top:40px; opacity:0.6; font-size: 0.95rem;">Live app snapshot. Full unfiltered CSV tracker available to members.</p>
       </div>
@@ -458,23 +447,23 @@
           <p style="margin-top:10px; opacity:0.8;">We trust the odds more when £100k is matched, and less when the market is thin, protecting you from artificial price manipulation.</p>
         </div>
         <div class="card">
-          <h3>📈 Momentum Tracking</h3>
-          <p style="margin-top:10px; opacity:0.8;">Horses with a win or run in the last 30 days receive a fitness bump. We isolate false favorites running on empty.</p>
+          <h3>🏇 Smarter Handicap Profiling</h3>
+          <p style="margin-top:10px; opacity:0.8;">The algorithm reads race dynamics, heavily penalizing vulnerable hold-up/rear runners likely to meet traffic in big fields, while correctly weighing the advantage of pace-setters.</p>
         </div>
         <div class="card">
-          <h3>🤖 Situational AI Flags</h3>
-          <p style="margin-top:10px; opacity:0.8;">Our Anthropic AI integration instantly penalizes horses for stepping up in class, running on unsuitable ground, or carrying "Beaten Favorite" baggage.</p>
+          <h3>🤖 Claude 3.5 AI & Macro Sync</h3>
+          <p style="margin-top:10px; opacity:0.8;">Run live web research in seconds. Use the 9:30 AM Macro Sync to automatically scour tipster consensus and track data to identify vulnerable, short-priced drifters before the market moves.</p>
         </div>
         <div class="card">
-          <h3>🛡️ One-Per-Race Protection</h3>
-          <p style="margin-top:10px; opacity:0.8;">Our alerts automatically deduplicate targets, ensuring you never carry double-liability in the same race.</p>
+          <h3>📱 Push to Telegram</h3>
+          <p style="margin-top:10px; opacity:0.8;">Trade from anywhere. Push high-confidence Lay alerts, AI scouting reports, and automated End-of-Day performance summaries directly to your private Telegram channel with a single click.</p>
         </div>
       </div>
       
       <div style="margin-top: 60px; background: rgba(20, 20, 20, 0.8); padding: 50px 40px; border-radius: 16px; border: 1px solid rgba(181, 158, 95, 0.2); box-shadow: 0 15px 40px rgba(0,0,0,0.6);">
         <h3 style="text-align: center; color: var(--primary); font-size: 2.2rem; margin-bottom: 20px;">⚡ The Pre-Race Cash Out Edge</h3>
         <p style="text-align: center; opacity: 0.9; margin-bottom: 50px; font-size: 1.15rem; max-width: 850px; margin-left: auto; margin-right: auto; line-height: 1.6;">
-          We alerted <strong>Dashing Donkey</strong> at 5.40 at 9:08 AM. By post time (17:10), the market realized the price was wrong and drifted it out to 7.40. This created the ultimate dual-threat scenario: members could either hit the Cash Out button for a guaranteed, risk-free profit before the stalls even opened, or let the bet ride for the full payout. <strong>(And yes, exactly as our algorithm predicted, the horse went on to lose the race).</strong>
+          One-Click Dual-Threat Trades. Execute your Lay and set an unmatched target Back order simultaneously. LayEdge calculates precise implied probability shifts and snaps automatically to valid Betfair ticks. If the market drifts pre-race, you green up automatically; if it doesn't, your high-confidence lay rides.
         </p>
         
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px;">
@@ -563,10 +552,10 @@
           </div>
           <p style="color:var(--primary); font-weight: 500;">Lifetime Price Lock</p>
           <ul>
-            <li><span>✓</span> Daily High-Probability Lay Alerts</li>
-            <li><span>✓</span> Live Expected Value (EV) Matching</li>
-            <li><span>✓</span> Macro-Market AI Sync (9:30 AM)</li>
-            <li><span>✓</span> Premium Telegram Channel</li>
+            <li><span>✓</span> Automated Dual-Threat Trade Engine</li>
+            <li><span>✓</span> Claude 3.5 AI Scouting & Macro Sync</li>
+            <li><span>✓</span> True Net ROI Tracker (Commission Adjusted)</li>
+            <li><span>✓</span> Premium Telegram Channel Broadcasts</li>
             <li><span>✓</span> Full Results + Excel Tracker</li>
           </ul>
           <a href="https://mymembers.io/lay-edge" class="btn" target="_blank" rel="noopener">Lock In Launch Offer</a>
