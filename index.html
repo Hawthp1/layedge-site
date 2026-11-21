@@ -10,7 +10,7 @@
 
   <style>
     :root {
-      --primary: #b59e5f;
+      --primary: #cc7d52;
       --dark: #0a0a0a;
       --gray: #121212;
       --lightgray: #1f1f1f;
@@ -112,8 +112,8 @@
     }
     .btn:hover { 
       transform: translateY(-3px); 
-      background: #c9b47a;
-      box-shadow: 0 10px 20px rgba(181, 158, 95, 0.2);
+      background: #df9368;
+      box-shadow: 0 10px 20px rgba(204, 125, 82, 0.25);
     }
 
     section { padding: 100px 5%; max-width: 1200px; margin: 0 auto; }
@@ -130,7 +130,7 @@
     }
 
     .offer-banner {
-      background: linear-gradient(135deg, #b59e5f, #d4c090);
+      background: linear-gradient(135deg, #b8683e, #e29b70);
       color: #000;
       text-align: center;
       padding: 18px 20px;
@@ -138,7 +138,7 @@
       font-weight: bold;
       margin-bottom: 40px;
       border-radius: 8px;
-      box-shadow: 0 8px 20px rgba(181, 158, 95, 0.2);
+      box-shadow: 0 8px 20px rgba(204, 125, 82, 0.25);
     }
 
     .cards {
@@ -159,7 +159,7 @@
     .card:hover {
       transform: scale(1.03) translateY(-5px);
       background: #282828;
-      border: 1px solid rgba(181, 158, 95, 0.3);
+      border: 1px solid rgba(204, 125, 82, 0.35);
       box-shadow: 0 15px 30px rgba(0,0,0,0.5);
     }
 
@@ -268,7 +268,7 @@
       transition: all 0.4s ease;
       border: 1px solid rgba(255,255,255,0.02);
     }
-    .price-card:hover { transform: translateY(-8px); box-shadow: 0 20px 40px rgba(181, 158, 95, 0.15); }
+    .price-card:hover { transform: translateY(-8px); box-shadow: 0 20px 40px rgba(204, 125, 82, 0.2); }
     .price { font-size: 2.8rem; font-weight: bold; margin: 15px 0; color: var(--primary); }
     .strikethrough { text-decoration: line-through; opacity: 0.4; font-size: 1.4rem; margin-right: 8px; }
     .price-card ul { list-style: none; text-align: left; margin: 25px 0; line-height: 2.2; }
@@ -469,7 +469,7 @@
         </div>
       </div>
       
-      <div style="margin-top: 60px; background: rgba(20, 20, 20, 0.8); padding: 50px 40px; border-radius: 16px; border: 1px solid rgba(181, 158, 95, 0.2); box-shadow: 0 15px 40px rgba(0,0,0,0.6);">
+      <div style="margin-top: 60px; background: rgba(20, 20, 20, 0.8); padding: 50px 40px; border-radius: 16px; border: 1px solid rgba(204, 125, 82, 0.25); box-shadow: 0 15px 40px rgba(0,0,0,0.6);">
         <h3 style="text-align: center; color: var(--primary); font-size: 2.2rem; margin-bottom: 20px;">⚡ The Pre-Race Cash Out Edge</h3>
         <p style="text-align: center; opacity: 0.9; margin-bottom: 50px; font-size: 1.15rem; max-width: 850px; margin-left: auto; margin-right: auto; line-height: 1.6;">
           One-Click Dual-Threat Trades ("Free Ride" Mode). Execute your opening Lay and place an unmatched target Back limit order (set to lapse at the off) simultaneously. If the market drifts pre-race, you lock in risk-free profit; if it doesn't, the Back cancels at the off and your high-confidence Lay rides.
@@ -555,8 +555,8 @@
         Lock in £3.99/mo for life (Normally £19.99/mo)
       </div>
       <div class="pricing-table">
-        <div class="price-card">
-          <h3>Monthly</h3>
+        <div class="price-card" style="border: 2px solid var(--primary); transform: scale(1.02);">
+          <h3>Monthly <span style="color:var(--primary); font-size: 0.9rem; display:block; margin-top:5px;">(Most Popular)</span></h3>
           <div style="margin: 20px 0;">
             <span class="strikethrough">£19.99</span>
             <span class="price">£3.99</span>
@@ -575,8 +575,8 @@
             🔒 <strong>Zero Risk:</strong> No lock-in contracts. Cancel anytime.
           </span>
         </div>
-        <div class="price-card" style="border: 2px solid var(--primary); transform: scale(1.02);">
-          <h3>Yearly <span style="color:var(--primary); font-size: 0.9rem; display:block; margin-top:5px;">(Best Value)</span></h3>
+        <div class="price-card">
+          <h3>Yearly <span style="color:var(--primary); font-size: 0.9rem; display:block; margin-top:5px;">(Annual Plan)</span></h3>
           <div class="price" style="margin: 20px 0;">£179<span style="font-size:1.1rem; opacity:0.7;">/yr</span></div>
           <p style="color:var(--primary); font-weight: 500;">Save £60 per year</p>
           <ul>
@@ -584,7 +584,7 @@
             <li><span>✓</span> Priority Support Channels</li>
             <li><span>✓</span> Early Access to Beta Features</li>
           </ul>
-          <a href="#" class="btn">Claim Best Value</a>
+          <a href="#" class="btn">Claim Annual Plan</a>
           <span class="risk-reversal" style="margin-top: 15px; display: block; font-size: 0.95rem;">
             🔒 <strong>Zero Risk:</strong> 14-day money-back guarantee on annual plans.
           </span>
@@ -610,8 +610,8 @@
 
   <div id="cookie-banner">
     This website uses cookies to enhance your experience. 
-    <a href="#" onclick="showPrivacyModal()" style="color:#b59e5f; margin-left:5px;">Learn more</a>
-    <button onclick="acceptCookies()" style="margin-left:20px; padding:8px 20px; background:#b59e5f; color:black; border:none; border-radius:6px; cursor:pointer; font-weight:bold;">Accept</button>
+    <a href="#" onclick="showPrivacyModal()" style="color:#cc7d52; margin-left:5px;">Learn more</a>
+    <button onclick="acceptCookies()" style="margin-left:20px; padding:8px 20px; background:#cc7d52; color:black; border:none; border-radius:6px; cursor:pointer; font-weight:bold;">Accept</button>
   </div>
 
   <div id="privacy-modal">
@@ -626,7 +626,7 @@
         <h3>1. The Data We Collect About You</h3>
         <p>We may collect, use, store, and transfer different kinds of personal data about you, including Identity Data, Contact Data, and Technical Data.</p>
       </div>
-      <button onclick="closePrivacyModal()" style="margin-top:30px; padding:12px 30px; background:#b59e5f; color:black; border:none; border-radius:6px; cursor:pointer; font-weight:bold; width: 100%;">Close</button>
+      <button onclick="closePrivacyModal()" style="margin-top:30px; padding:12px 30px; background:#cc7d52; color:black; border:none; border-radius:6px; cursor:pointer; font-weight:bold; width: 100%;">Close</button>
     </div>
   </div>
 
@@ -640,7 +640,7 @@
         <p><strong>Last updated: June 2026</strong></p>
         <p>Please read these Terms and Conditions ("Terms", "Terms and Conditions") carefully before using the Lay Edge website.</p>
       </div>
-      <button onclick="closeTermsModal()" style="margin-top:30px; padding:12px 30px; background:#b59e5f; color:black; border:none; border-radius:6px; cursor:pointer; font-weight:bold; width: 100%;">Close</button>
+      <button onclick="closeTermsModal()" style="margin-top:30px; padding:12px 30px; background:#cc7d52; color:black; border:none; border-radius:6px; cursor:pointer; font-weight:bold; width: 100%;">Close</button>
     </div>
   </div>
 
